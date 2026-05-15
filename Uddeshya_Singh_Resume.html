@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uddeshya Singh - Resume</title>
+    <style>
+      :root {
+        --font-scale: 1;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Times New Roman", Times, serif;
+        line-height: 1.2;
+        color: #000;
+        background-color: #fff;
+        padding: 0.5in;
+        max-width: 8.5in;
+        margin: 0 auto;
+      }
+
+      .container {
+        background: white;
+        padding: 0;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        font-size: calc(24px * var(--font-scale));
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 3px;
+      }
+
+      .contact-info {
+        font-size: calc(10px * var(--font-scale));
+        margin-bottom: 2px;
+        line-height: 1.1;
+      }
+
+      .contact-info a {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      .website {
+        font-size: calc(10px * var(--font-scale));
+        text-decoration: underline;
+      }
+
+      .section-title {
+        font-size: calc(12px * var(--font-scale));
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #000;
+      }
+
+      .section {
+        margin-bottom: 8px;
+      }
+
+      .skill-item {
+        font-size: calc(10px * var(--font-scale));
+        margin-bottom: 2px;
+        line-height: 1.3;
+      }
+
+      .skill-label {
+        font-weight: bold;
+      }
+
+      .experience-item {
+        margin-bottom: 8px;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1px;
+      }
+
+      .job-title {
+        font-weight: bold;
+        font-size: calc(11px * var(--font-scale));
+      }
+
+      .job-date {
+        font-size: calc(10px * var(--font-scale));
+        font-weight: normal;
+      }
+
+      .company-name {
+        font-style: italic;
+        font-size: calc(10px * var(--font-scale));
+        margin-bottom: 1px;
+      }
+
+      .company-location {
+        font-style: italic;
+        font-size: calc(10px * var(--font-scale));
+        text-align: right;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3px;
+      }
+
+      .location {
+        font-style: italic;
+        font-size: calc(10px * var(--font-scale));
+      }
+
+      .description-list {
+        margin-left: 15px;
+        font-size: calc(10px * var(--font-scale));
+        line-height: 1.35;
+        padding: 0;
+      }
+
+      .description-list li {
+        margin-bottom: 2px;
+      }
+
+      .project-item {
+        margin-bottom: 7px;
+      }
+
+      .project-title {
+        font-weight: bold;
+        font-size: calc(11px * var(--font-scale));
+        margin-bottom: 1px;
+      }
+
+      .project-tech {
+        font-style: italic;
+        font-size: calc(10px * var(--font-scale));
+        margin-bottom: 2px;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .project-date {
+        font-size: calc(10px * var(--font-scale));
+        font-weight: normal;
+      }
+
+      .education-item {
+        margin-bottom: 7px;
+      }
+
+      .degree {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        font-size: calc(10px * var(--font-scale));
+        margin-bottom: 1px;
+      }
+
+      .degree-details {
+        font-style: italic;
+        font-size: calc(10px * var(--font-scale));
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2px;
+      }
+
+      .font-controls {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .font-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #333;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+      }
+
+      .font-btn:hover {
+        background-color: #555;
+      }
+
+      .font-btn:active {
+        transform: scale(0.95);
+      }
+
+      .font-indicator {
+        background-color: #333;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        min-width: 45px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        font-family: Arial, sans-serif;
+      }
+
+      @media print {
+        .font-controls {
+          display: none;
+        }
+      }
+
+      .highlight {
+        font-weight: bold;
+      }
+
+      .tech-highlight {
+        font-weight: bold;
+      }
+
+      [contenteditable]:focus {
+        outline: 2px dashed #aaa;
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
+      [contenteditable]:hover {
+        outline: 1px dashed #ccc;
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
+      @media print {
+        [contenteditable]:focus,
+        [contenteditable]:hover {
+          outline: none;
+        }
+
+        body {
+          padding: 0.5in;
+          background: white;
+          margin: 0;
+          max-width: 100%;
+        }
+        .container {
+          max-height: 11in;
+          overflow: hidden;
+        }
+        .name {
+          font-size: calc(26px * var(--font-scale));
+        }
+        .contact-info {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .website {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .section-title {
+          font-size: calc(14px * var(--font-scale));
+        }
+        .skill-item {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .job-header {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .job-title {
+          font-size: calc(13px * var(--font-scale));
+        }
+        .job-date {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .company-name {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .company-location {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .location {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .description-list {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .project-title {
+          font-size: calc(13px * var(--font-scale));
+        }
+        .project-tech {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .project-date {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .degree {
+          font-size: calc(12px * var(--font-scale));
+        }
+        .degree-details {
+          font-size: calc(12px * var(--font-scale));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Floating Font Size Controls -->
+    <div class="font-controls">
+      <button class="font-btn" id="decreaseFont" title="Decrease Font Size">
+        −
+      </button>
+      <div class="font-indicator" id="fontIndicator">100%</div>
+      <button class="font-btn" id="increaseFont" title="Increase Font Size">
+        +
+      </button>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="name" contenteditable="true">Uddeshya Singh</div>
+        <div class="contact-info" contenteditable="true">
+          +91 9875660105 | uddeshydasingh12bsc@gmail.com |
+          <a href="https://linkedin.com/in/uddeshya-singh-9b3049236"
+            >linkedin.com/in/uddeshya</a
+          >
+          |
+          <a href="https://github.com/jettspanner123"
+            >github.com/jettspanner123</a
+          >
+          |
+        </div>
+        <div class="website" contenteditable="true">
+          <a
+            style="color: black"
+            href="https://uddeshyasinghrajput.vercel.app/"
+          >
+            uddeshyasinghrajput.app
+          </a>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="skill-item" contenteditable="true">
+          <span class="skill-label">Languages:</span> TypeScript, JavaScript,
+          Swift, Dart, C#, Java
+        </div>
+        <div class="skill-item" contenteditable="true">
+          <span class="skill-label">Technologies:</span> React.js, Next.js,
+          Angular, Flutter, SwiftUI, Node.js, Hono.js, Express.js, ASP.NET,
+          Spring Boot, Kafka
+        </div>
+        <div class="skill-item" contenteditable="true">
+          <span class="skill-label">Tools:</span> PostgreSQL, MySQL, MongoDB,
+          DynamoDB, AWS S3, Git, GitHub, Docker, JetBrains IDEs, Jira
+        </div>
+      </div>
+
+      <!-- Work Experience Section -->
+      <div class="section">
+        <div class="section-title">Work Experience</div>
+
+        <!-- Job 1 -->
+        <div class="experience-item">
+          <div class="job-header">
+            <span class="job-title" contenteditable="true">Associate Software Engineer</span>
+            <span class="job-date" contenteditable="true">Oct, 2025 – Present</span>
+          </div>
+          <div class="company-location">
+            <span class="company-name" contenteditable="true">JungleWorks</span>
+            <span class="location" contenteditable="true">Mohali, Punjab, India</span>
+          </div>
+          <ul class="description-list">
+            <li contenteditable="true">
+              Working as a Software Engineer in the
+              <span class="tech-highlight">Outplay</span> team, contributing to
+              a large-scale product serving a high-volume user base
+            </li>
+            <li contenteditable="true">
+              Primarily developing backend services using
+              <span class="tech-highlight">.NET</span> as the core framework
+            </li>
+            <li contenteditable="true">
+              Leveraging <span class="tech-highlight">Golang</span> to build
+              high-performance endpoints requiring low-latency and fast data
+              access
+            </li>
+            <li contenteditable="true">
+              Developing and integrating AI-driven features within the
+              <span class="tech-highlight">Outplay-AI</span> application using
+              <span class="tech-highlight">Python</span>
+            </li>
+            <li contenteditable="true">
+              Designing scalable APIs, optimizing system performance, and
+              collaborating cross-functionally to ensure reliability,
+              maintainability, and seamless feature delivery in a high-traffic
+              environment
+            </li>
+          </ul>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="experience-item">
+          <div class="job-header">
+            <span class="job-title" contenteditable="true"
+              >Frontend Developer Intern (UI/UX, SEO & Design)</span
+            >
+            <span class="job-date" contenteditable="true">Jul. 2022 – Sep. 2022</span>
+          </div>
+          <div class="company-location">
+            <span class="company-name" contenteditable="true">HelioWeb</span>
+            <span class="location" contenteditable="true">Bikaner, Rajasthan, India</span>
+          </div>
+          <ul class="description-list">
+            <li contenteditable="true">
+              Developed responsive web applications using JavaScript, React, and
+              Next.js, supporting 50+ active users
+            </li>
+            <li contenteditable="true">
+              Implemented SEO best practices for
+              <span class="tech-highlight">React</span>, improving organic
+              traffic by 5% and page speed by 15%
+            </li>
+            <li contenteditable="true">
+              Integrated Google Analytics to track 2K+ monthly users, increasing
+              engagement and retention by 18%
+            </li>
+            <li contenteditable="true">
+              Designed 5+ UI/UX flows and created 30+ graphic design assets for
+              web and marketing use
+            </li>
+          </ul>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="experience-item">
+          <div class="job-header">
+            <span class="job-title" contenteditable="true">Software Developer Intern</span>
+            <span class="job-date" contenteditable="true">Feb. 2025 – Mar. 2025</span>
+          </div>
+          <div class="company-location">
+            <span class="company-name" contenteditable="true">Infosys</span>
+            <span class="location" contenteditable="true">Mysuru, Karnataka, India</span>
+          </div>
+          <ul class="description-list">
+            <li contenteditable="true">
+              Developed the Hospital Management System (HMS) iOS application
+              using <span class="tech-highlight">SwiftUI</span>, awarded Best UI
+              Application for Cohort 2 at Apple Development Center, Infosys
+            </li>
+            <li contenteditable="true">
+              Collaborated with designers on UI/UX refinement and independently
+              led <span class="tech-highlight">Scrum</span> meetings to ensure
+              timely delivery and cross-team coordination
+            </li>
+            <li contenteditable="true">
+              Recognized by management for exceptional front-end development
+              skills, resulting in an indirect job offer from the reporting
+              manager
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="section">
+        <div class="section-title">Projects</div>
+
+        <!-- Project 1 -->
+        <div class="project-item">
+          <div class="project-header">
+            <div>
+              <div class="project-title" contenteditable="true">
+                Sweat It |
+                <span class="project-tech"
+                  >SwiftUI, ASP.NET, Gemini AI (LLM Integration)</span
+                >
+              </div>
+            </div>
+            <span class="project-date" contenteditable="true">Jun. 2025 – Present</span>
+          </div>
+          <ul class="description-list">
+            <li contenteditable="true">
+              Built an AI-powered fitness application delivering personalized
+              workout and diet plans using real-time health data
+            </li>
+            <li contenteditable="true">
+              Designed intelligent recommendation logic that improved plan
+              adaptability and increased user retention by 15%
+            </li>
+            <li contenteditable="true">
+              Implemented multi-device responsive UI, reducing layout and
+              usability issues by 100%
+            </li>
+            <li contenteditable="true">
+              Integrated cloud-based services to lower data latency by 40%, with
+              the application prepared for release on the
+              <span class="tech-highlight">Apple App Store</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item">
+          <div class="project-header">
+            <div>
+              <div class="project-title" contenteditable="true">
+                VNote: Payment Tracking & Repayment Tracker |
+                <span class="project-tech"
+                  >Flutter, Spring Boot, PostgreSQL</span
+                >
+              </div>
+            </div>
+            <span class="project-date" contenteditable="true">In Development</span>
+          </div>
+          <ul class="description-list">
+            <li contenteditable="true">
+              Built a cross-platform Flutter app (Android & iOS) using
+              <span class="tech-highlight">BLoC</span> for predictable state
+              management
+            </li>
+            <li contenteditable="true">
+              Developed a secure Spring Boot backend with
+              <span class="tech-highlight">3-layer architecture</span> and
+              Spring Security-based authorization
+            </li>
+            <li contenteditable="true">
+              Implemented persistence using
+              <span class="tech-highlight">Hibernate & JPA</span> with an
+              optimized PostgreSQL schema
+            </li>
+            <li contenteditable="true">
+              Designing LLM-powered
+              <span class="tech-highlight">analytics APIs</span> for intelligent
+              insights and summaries
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="section">
+        <div class="section-title">Education</div>
+
+        <!-- University -->
+        <div class="education-item">
+          <div class="degree">
+            <span class="highlight" contenteditable="true">Chitkara University</span>
+            <span contenteditable="true">Patiala, Punjab, India</span>
+          </div>
+          <div class="degree-details">
+            <span contenteditable="true"
+              >Bachelor of Engineering in Computer Science, Minor in iOS
+              Development</span
+            >
+            <span contenteditable="true">Aug. 2022 - Oct. 2026</span>
+          </div>
+        </div>
+
+        <!-- High School -->
+        <div class="education-item">
+          <div class="degree">
+            <span class="highlight" contenteditable="true">Asian International School</span>
+            <span contenteditable="true">Howrah, West Bengal</span>
+          </div>
+          <div class="degree-details">
+            <span contenteditable="true">High School</span>
+            <span contenteditable="true">Aug. 2020 - Jun. 2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Font size scaling functionality
+      const increaseBtn = document.getElementById("increaseFont");
+      const decreaseBtn = document.getElementById("decreaseFont");
+      const fontIndicator = document.getElementById("fontIndicator");
+      let fontScale = parseFloat(localStorage.getItem("fontScale")) || 1;
+
+      // Apply saved font scale on page load
+      document.documentElement.style.setProperty("--font-scale", fontScale);
+      updateIndicator();
+
+      function updateIndicator() {
+        const percentage = Math.round(fontScale * 100);
+        fontIndicator.textContent = percentage + "%";
+      }
+
+      increaseBtn.addEventListener("click", () => {
+        fontScale += 0.01;
+        document.documentElement.style.setProperty("--font-scale", fontScale);
+        localStorage.setItem("fontScale", fontScale);
+        updateIndicator();
+      });
+
+      decreaseBtn.addEventListener("click", () => {
+        fontScale -= 0.01;
+        document.documentElement.style.setProperty("--font-scale", fontScale);
+        localStorage.setItem("fontScale", fontScale);
+        updateIndicator();
+      });
+    </script>
+  </body>
+</html>
